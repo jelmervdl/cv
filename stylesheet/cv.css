@@ -1,12 +1,14 @@
 body {
-	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-family: Verdana;
 	font-size: 14.5px;
-	line-height: 1.4em;
+	line-height: 1.6em;
+	color: hsl(0, 0%, 15%);
+	background: hsl(0, 0%, 92%) url(noise.png);
 }
 
 article {
 	width: 44em;
-	margin: 0 auto;
+	margin: 4em auto;
 }
 
 h2 {
