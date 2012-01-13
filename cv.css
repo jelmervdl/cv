@@ -1,0 +1,74 @@
+body {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 14.5px;
+	line-height: 1.4em;
+}
+
+article {
+	width: 44em;
+	margin: 0 auto;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 2.4em;
+	margin: 1.2em 0 0.4em 0;
+	page-break-after: avoid;
+}
+
+section {
+	page-break-inside: avoid;
+}
+
+address {
+	font-style: normal;
+}
+
+.vcalendar,
+address {
+	list-style:none;
+	padding-left: 9em;
+}
+
+.vevent {
+	margin-bottom: 0.8em;
+}
+
+.vevent .period,
+address .label {
+	float: left;
+	margin-left: -9em;
+}
+
+p {
+	margin: 0 0 0.4em 0;
+}
+
+#last-modified {
+	opacity: 0.5;
+	float: right;
+}
+
+@media print {
+	body {
+		font-size: 12pt;
+	}
+	
+	article {
+		padding: 0 4em;
+		width: 48em;
+	}
+	
+	#languages {
+		
+	}
+	
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	
+	a[title]:after {
+		content: " (" attr(title) ")";
+	}
+}
