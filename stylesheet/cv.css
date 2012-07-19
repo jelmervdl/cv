@@ -7,7 +7,7 @@ body {
 }
 
 article {
-	width: 44em;
+	width: 48em;
 	margin: 4em auto;
 }
 
@@ -25,7 +25,7 @@ address {
 .vcalendar,
 address {
 	list-style:none;
-	padding-left: 9em;
+	padding-left: 12em;
 }
 
 .vevent {
@@ -35,7 +35,7 @@ address {
 .vevent .period,
 address .label {
 	float: left;
-	margin-left: -9em;
+	margin-left: -12em;
 }
 
 p {
@@ -54,7 +54,6 @@ p {
 	
 	article {
 		padding: 0 4em;
-		width: 48em;
 	}
 
 	section {
@@ -73,4 +72,44 @@ p {
 	a[title]:after {
 		content: " (" attr(title) ")";
 	}
+
+	#toggle-details {
+		display: none;
+	}
+}
+
+.less-detailed {
+	display: none;
+}
+
+.hide-details .less-detailed {
+	display: inherit;
+}
+
+.hide-details .detailed {
+	display: none;
+}
+
+.hide-details .important-low {
+	display: none;
+}
+
+#toggle-details {
+	opacity: 0.5;
+	color: inherit;
+	float: right;
+	margin-right: 0.5em;
+	clear: right;
+}
+
+#toggle-details .more-details {
+	display: none;
+}
+
+.hide-details #toggle-details .more-details {
+	display: inline;
+}
+
+.hide-details #toggle-details .less-details {
+	display: none;
 }

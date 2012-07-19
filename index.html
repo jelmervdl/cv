@@ -5,22 +5,25 @@
 		<title>Curriculum Vitae van Jelmer van der Linde</title>
 		<link rel="stylesheet" href="stylesheet/cv.css">
 	</head>
-	<body>
+	<body class="">
 		<article id="page">
-			<time id="last-modified" class="dt">13 januari 2012</time>
+			<time id="last-modified" class="dt">13 mei 2012</time>
+			<a href="#" id="toggle-details">
+				<span class="more-details">Uitgebreider</span>
+				<span class="less-details">Korter</span>
+			</a>
 			
 			<section id="personalia">
 				<h2>Personalia</h2>
 				<address class="vcard">
 					<span class="label">Naam:</span> <span class="fn">Jelmer van der Linde</span><br>
 					<span class="label">Adres:</span> <span class="adr">
-							<span class="street-address">Moesstraat 72a</span><br>
+							<span class="street-address">Moesstraat 72a</span>,
 							<span class="postal-code">9741 AC</span>, <span class="locality">Groningen</span><br>
 					</span>
 					<span class="label">E–mail:</span> <a class="email" href="mailto:jelmer@ikhoefgeen.nl">jelmer@ikhoefgeen.nl</a><br>
 					<span class="label">Website:</span> <a class="url" href="http://www.ikhoefgeen.nl">ikhoefgeen.nl</a><br>
-					<span class="label">Telefoon:</span> <span class="tel home">058 - 266 52 89</span><br>
-					<span class="label">Mobiel:</span> <span class="tel mobile">06 - 248 244 31</span><br>
+					<span class="label">Telefoon:</span> <span class="tel mobile">06 - 248 244 31</span><br>
 					<span class="label">Geboortedatum:</span> <time class="birthdate dt" title="1988-11-07">7 november 1988</time>
 				</address>
 			</section>
@@ -32,19 +35,19 @@
 						<span class="period">
 							<time class="dtstart">2008</time> – <time title="2010-06-27" class="dtend">heden</time>
 						</span>
-						<span class="summary">Bachelor Kunstmatige Intelligentie aan de Rijksuniversiteit Groningen</span>
+						<span class="summary">Bachelor Kunstmatige Intelligentie aan de Rijksuniversiteit Groningen.</span>
 					</li>
 					<li class="education vevent important-high">
 						<span class="period">
 							<time class="dtstart">2006</time> – <time class="dtend">2008</time>
 						</span>
-						<span class="summary">Atheneum op Piter Jelles Adlân, geslaagd in 2008</span>
+						<span class="summary">Atheneum op Piter Jelles Adlân, geslaagd in 2008.</span>
 					</li>
 					<li class="education vevent important-medium">
 						<span class="period">
 							<time class="dtstart">2001</time> – <time class="dtend">2006</time>
 						</span>
-						<span class="summary">Gymnasium op Piter Jelles Stedelijk Gymnasium</span>
+						<span class="summary">Gymnasium op Piter Jelles Stedelijk Gymnasium.</span>
 					</li>
 				</ol>
 			</section>
@@ -54,25 +57,29 @@
 				<ol class="vcalendar">
 					<li class="experience vevent important-high">
 						<span class="period">
-							<time class="dtstart" title="2010-07-01">2010</time> – <time title="2012-04-01">heden</time>
+							<time class="dtstart" datetime="2010-07-01">juli 2010</time> – <time class="dtend" datetime="2013-07-01">heden</time>
 						</span>
-						<span class="summary">Studentassistent bij de factulteit Letteren aan de <span class="afflication vcard"><span class="fn org">Rijksuniversiteit Groningen</span></span>. Ik begeleid &amp; beoordeel de practica van de vakken Logisch Programmeren en Natuurlijke Taalverwerking 1.<br>
-						Daarnaast werk ik mee aan <a href="http://rug-compling.github.com/dact">Dact</a>, een grafisch programma geschreven in C++/Qt waarmee compact corpora gemakkelijk zijn te verkennen met XPath &amp; XQuery.</span>
+						<span class="summary">Studentassistent bij de factulteit Letteren aan de <span class="afflication vcard"><span class="fn org">Rijksuniversiteit Groningen</span></span>.
+							<span class="detailed">Ik begeleid &amp; beoordeel de practica van de vakken Logisch Programmeren en Natuurlijke Taalverwerking 1.<br>
+							Daarnaast werk ik mee aan <a href="http://rug-compling.github.com/dact">Dact</a>, een grafisch programma geschreven in C++/Qt waarmee compact corpora gemakkelijk zijn te verkennen met XPath &amp; XQuery.</span>
+							<span class="less-detailed">Lesgeven en programmeren.</span>
+						</span>
 					</li>
 					<li class="experience vevent important-high">
 						<span class="period">
-							<time class="dtstart" title="2006-11-07">2006</time> – <time title="2010-06-27">heden</time>
+							<time class="dtstart" datetime="2006-11-07">nov 2006</time> – <time>heden</time>
 						</span>
-						<span class="summary">Eigenaar en enige werknemer van <span class="afflication vcard"><span class="fn org">Jelmer van der Linde</span></span>. Ik heb meerdere kleine websites voor starters gemaakt die zij zelf onderhouden.<br>
+						<span class="summary detailed">Eigenaar en enige werknemer van <span class="afflication vcard"><span class="fn org">Jelmer van der Linde</span></span>. Ik heb meerdere kleine websites voor starters gemaakt die zij zelf onderhouden.<br>
 							Voor het gemeentelijk samenwerkingsverband <span class="afflication vcard"><a href="http://www.iszf.nl" class="fn org">ISZF</a></span> heb ik meegewerkt aan een systeem voor het omzetten van <a href="http://bag.vrom.nl/">de basisregistraties van de gemeenten</a>. Mede hierdoor zijn zes gemeenten in Friesland op tijd door de audit gekomen. Het idee en de uitvoering zijn geprezen door Vrom.<br>
 						<!--Op het moment help ik mee aan het technisch onderhouden en verbeteren van een grote datingsite.-->
-						Ik werk vaak samen met <span class="afflication vcard"><a href="http://hiddedevries.nl/" class="fn org">Hidde de Vries</a></span> bij het maken van websites op basis van <a href="http://wordpress.org">Wordpress</a>.
+						Ik werk vaak samen met <span class="afflication vcard"><a href="http://hiddedevries.nl/" class="fn org">Hidde de Vries</a></span> bij het maken van websites op basis van <a href="http://wordpress.org">Wordpress</a>.</span>
+						<span class="summary less-detailed">Freelance webdeveloper.</span>
 					</li>
 					<li class="experience vevent important-high">
 						<span class="period">
-							<span class="dtstart">zomer 2007</span>
+							<time class="dtstart" datetime="2007-07-01">juli 2007</time> – <time class="dtend" datetime="2007-09-01">sep 2007</time>
 						</span>
-						<span class="summary">Webdeveloper bij <span class="affiliation vcard"><a class="fn org" href="http://concept7.nl/">Concept7</a></span>, waar ik heb gewerkt aan een inventaris-beheer-applicatie, en een bestaande website heb omgezet naar Wordpress.</span>
+						<span class="summary">Webdeveloper bij <span class="affiliation vcard"><a class="fn org" href="http://concept7.nl/">Concept7</a></span>. <span class="detailed">Ik heb gewerkt aan een inventaris-beheer-applicatie, en een bestaande website omgezet naar Wordpress.</span></span>
 					</li>
 				</ol>
 			</section>
@@ -82,7 +89,7 @@
 				<ol class="vcalendar">
 					<li class="vevent important-medium">
 						<span class="period">
-							<time class="dtstart" title="2009-11-05">2009</time>, <time class="dtstart" title="2009-10-04">2011</time>
+							<time class="dtstart" datetime="2009-11-05">2009</time>, <time class="dtstart" datetime="2011-10-06">2011</time>, <time class="dtstart" datetime="2012-10-04">2012</time>
 						</span>
 						<span class="summary">Vrijwilliger bij <a href="http://fronteers.nl/congres/">Fronteers conferentie</a> in 2009 en 2011.</span>
 					</li>
@@ -90,7 +97,7 @@
 						<span class="period">
 							<time class="dtstart">2007</time>
 						</span>
-						<span class="summary">Website voor de Filmdag van het Stedelijk Gymnasium gemaakt. Door anderen in 2008, 2009 weer gebruikt.</span>
+						<span class="summary">Website voor de Filmdag van het Stedelijk Gymnasium gemaakt. Door anderen in 2008, 2009 opnieuw gebruikt.</span>
 					</li>
 					<li class="vevent important-low">
 						<span class="period">
@@ -109,8 +116,8 @@
 		
 			<section id="skills">
 				<h2>Technische Vaardigheden</h2>
-				<p>Ik werk dagelijks met Mac OS X, Linux en Windows. Ik beheers PHP, JavaScript, HTML, CSS, C++, Java, Python, Haskell, XML, XPath en SQL. Object georiënteerd programmeren heeft mijn voorkeur, tenzij ik functioneel mag programmeren. Ik heb ruim ervaring in het normaliseren en in het gebruik van relationele databases.</p>
-			</section>	
+				<p>Ik werk dagelijks met Mac OS X, Linux en Windows. Ik beheers PHP, JavaScript, HTML, CSS, C++, Java, Python, Haskell, XML, XPath en SQL. Object georiënteerd en functioneel programmeren hebben mijn voorkeur. Ik heb ruim ervaring in het normaliseren en in het gebruik van relationele databases.</p>
+			</section>
 		
 			<section id="languages">
 				<h2>Talen</h2>
@@ -122,10 +129,17 @@
 		
 			<section id="hobbies">
 				<h2>Hobby's</h2>
-				<p>Ik ben vroeg begonnen met het programmeren van websites voor mijzelf en klasgenoten. Inmiddels is dat vervormd tot webapplicaties programmeren, met als doel te experimenteren met methodieken en de structuur van de applicatie. Alles over de kop gooien is niet ongewoon.</p>
-				<p>Sinds mijn eerste ervaring met PHP, stel en beantwoord ik graag vragen op <a href="http://www.phphulp.nl">PHPhulp.nl</a>. Ik heb al lange tijd de gewoonte even te kijken of er nog interessante vragen zijn zodra ik wat tijd over heb.</p>
-				<p>Ik programmeer kleine scriptjes om websites te verbeteren (plugins en userscripts), lees graag boeken in de trein, en ik spaar badeenden.</p>
+				<p class="detailed">Ik ben vroeg begonnen met het programmeren van websites voor mijzelf en klasgenoten. Inmiddels is dat vervormd tot webapplicaties programmeren, met als doel te experimenteren met methodieken en de structuur van de applicatie. Alles over de kop gooien is niet ongewoon.</p>
+				<p class="detailed">Sinds mijn eerste ervaring met PHP, stel en beantwoord ik graag vragen op <a href="http://www.phphulp.nl">PHPhulp.nl</a>. Ik heb al lange tijd de gewoonte even te kijken of er nog interessante vragen zijn zodra ik wat tijd over heb.</p>
+				<p>Ik programmeer graag kleine scriptjes om websites die ik veel gebruik te verbeteren (plugins en userscripts), lees graag boeken in de trein, en ik spaar badeenden.</p>
+				<!-- Hier zou nog iets over http://github.com/jelmervdl moeten staan ;) -->
 			</section>
 		</article>
+		<script>
+			document.getElementById('toggle-details').onclick = function() {
+				document.body.className = document.body.className == 'hide-details' ? '' : 'hide-details';
+				return false;
+			}
+		</script>
 	</body>
 </html>
