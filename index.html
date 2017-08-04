@@ -8,10 +8,10 @@
 	<body class="">
 		<article id="page">
 			<time id="last-modified" class="dt" datetime="2015-08-10">4 augustus 2017</time>
-			<a href="#" id="toggle-details">
-				<span class="more-details">Uitgebreider</span>
-				<span class="less-details">Korter</span>
-			</a>
+			<span id="toggle-details">
+				<a href="#more" class="more-details">Uitgebreider</a>
+				<a href="#less" class="less-details">Korter</a>
+			</span>
 			
 			<section id="personalia">
 				<h2>Personalia</h2>
@@ -209,10 +209,21 @@
 			</section>
 		</article>
 		<script>
-			document.getElementById('toggle-details').onclick = function() {
-				document.body.className = document.body.className == 'hide-details' ? '' : 'hide-details';
-				return false;
-			}
+			function onhashchange() {
+				switch (document.location.hash) {
+					case '#more':
+						document.body.className = '';
+						break;
+
+					case '#less':
+						document.body.className = 'hide-details';
+						break;
+				}
+			};
+
+			window.addEventListener('load', onhashchange);
+
+			window.addEventListener('hashchange', onhashchange);
 		</script>
 	</body>
 </html>
