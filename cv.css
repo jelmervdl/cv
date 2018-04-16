@@ -1,6 +1,6 @@
 body {
-	font-family: Verdana;
-	font-size: 14.5px;
+	font-family: serif;
+	font-size: 16px;
 	line-height: 1.6em;
 	color: #333;
 	background: white;
@@ -35,7 +35,9 @@ address {
 .vevent .period,
 address .label {
 	float: left;
-	margin-left: -12em;
+	margin-left: -13.3em;
+	font-family: sans-serif;
+	font-size: 0.9em;
 }
 
 p {
