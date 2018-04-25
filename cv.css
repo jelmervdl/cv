@@ -18,6 +18,10 @@ h2 {
 	page-break-after: avoid;
 }
 
+abbr {
+
+}
+
 address {
 	font-style: normal;
 }
@@ -42,6 +46,14 @@ address .label {
 
 p {
 	margin: 0 0 0.4em 0;
+}
+
+.project-name {
+	font-style: italic;
+}
+
+.publication-title {
+	font-style: italic;
 }
 
 #last-modified {
@@ -78,10 +90,26 @@ p {
 	#toggle-details {
 		display: none;
 	}
+
+	.project-name {
+		font-style: inherit;
+	}
+
+	.project-name::before {
+		content: '‘';
+	}
+
+	.project-name::after {
+		content: '’';
+	}
 }
 
 .less-detailed {
 	display: none;
+}
+
+.hide-details .summary strong {
+	font-weight: normal;
 }
 
 .hide-details .less-detailed {
