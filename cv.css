@@ -125,7 +125,6 @@ p {
 }
 
 #toggle-details {
-	opacity: 0.5;
 	color: inherit;
 	float: right;
 	clear: right;
@@ -158,4 +157,10 @@ p {
 
 .hide-details .summary:not(.show-details) .details-toggle {
 	display: inline;
+}
+
+@media print {
+	.details-toggle {
+		display: none !important;
+	}
 }
