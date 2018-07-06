@@ -79,7 +79,11 @@ sup {
 	}
 
 	section {
-        page-break-inside: avoid;
+        /*page-break-inside: avoid;*/
+	}
+
+	li, #skills {
+		page-break-inside: avoid;
 	}
 	
 	#languages {
@@ -109,6 +113,13 @@ sup {
 
 	.project-name::after {
 		content: '’';
+	}
+
+	body::after {
+		display: block;
+		text-align: center;
+		content: '–';
+		color: #ccc;
 	}
 }
 
