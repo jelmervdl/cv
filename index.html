@@ -7,7 +7,7 @@
 	</head>
 	<body class="">
 		<article id="page">
-			<time id="last-modified" class="dt" datetime="2018-09-19">September 19, 2018</time>
+			<time id="last-modified" class="dt" datetime="2019-09-08">September 8, 2019</time>
 			<span id="toggle-details">
 				<a href="#more" class="more-details">More detailed</a>
 				<a href="#less" class="less-details">Less detailed</a>
@@ -19,12 +19,14 @@
 				<h2>Personal</h2>
 				<address class="vcard">
 					<span class="label">Name:</span> <span class="fn">Jelmer van der Linde</span><br>
+					<!--
 					<span class="label">Address:</span> <span class="adr">
 							<span class="street-address">8/3 Bothwell Street</span>,
 							<span class="locality">Edinburgh</span>,
 							<span class="postal-code">EH7 5PR</span>,
 							<span class="country">Scotland</span><br>
 					</span>
+					-->
 					<span class="label">Email:</span> <a class="email" href="mailto:jelmer@jelmervanderlinde.nl">jelmer@jelmervanderlinde.nl</a><br>
 					<span class="label">Website:</span> <a class="url" href="http://www.jelmervanderlinde.nl">jelmervanderlinde.nl</a>, <a class="url" href="http://www.ikhoefgeen.nl">ikhoefgeen.nl</a><br>
 					<span class="label">Phone:</span> <span class="tel mobile">+44 7551 054305</span><br>
@@ -43,6 +45,12 @@
 			<section id="experience">
 				<h2>Work experience</h2>
 				<ol class="vcalendar">
+					<li class="experience vevent important-high">
+						<span class="period">
+							<time class="dtstart" datetime="2018-09-24">Sep 2018</time> &ndash; <time>now</time>
+						</span>
+						<span class="summary"><strong>Web &amp; API developer</strong> at <span class="afflication vcard"><a href="https://surfaceintelligence.com/" class="fn org">Global Surface Intelligence</a></span>. My main responsibility is developing and maintaining GSI's geospatial web platform &amp; infrastructure. But GSI being a small SME, I'm also contributing to the machine learning pipeline (mainly with LiDAR pre-processing, data acquisition).</span>
+					</li>
 					<li class="experience vevent important-high">
 						<span class="period">
 							<time class="dtstart" datetime="2006-11-07">Nov 2006</time> &ndash; <time>now</time>
@@ -240,22 +248,15 @@
 
 			window.addEventListener('hashchange', onhashchange);
 
-			Array.prototype.forEach.call(document.querySelectorAll('.detailed'), function(detailsSection) {
-				var parent = detailsSection.parentElement;
-
-				while (parent) {
-					if (parent.matches('.summary'))
-						break;
-					else
-						parent = parent.parentElement;
-				}
+			document.querySelectorAll('.detailed').forEach(detailsSection => {
+				const parent = detailsSection.closest('.summary');
 				
 				if (!parent || parent.classList.contains('has-details'))
 					return;
 
 				parent.classList.add('has-details');
 
-				var toggle = document.createElement('a');
+				const toggle = document.createElement('a');
 				toggle.href = '#';
 				toggle.className = 'details-toggle';
 				toggle.title = 'Tell me more';
@@ -266,23 +267,15 @@
 					e.preventDefault();
 					parent.classList.toggle('show-details');
 				});
-			})
+			});
+		
+			window._paq = [
+				['trackPageView'],
+				['enableLinkTracking'],
+				['setTrackerUrl', '//matomo.ikhoefgeen.nl/piwik.php'],
+				['setSiteId', '1']
+			];
 		</script>
-
-		<!-- Matomo -->
-		<script type="text/javascript">
-		  var _paq = _paq || [];
-		  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-		  _paq.push(['trackPageView']);
-		  _paq.push(['enableLinkTracking']);
-		  (function() {
-		    var u="//matomo.ikhoefgeen.nl/";
-		    _paq.push(['setTrackerUrl', u+'piwik.php']);
-		    _paq.push(['setSiteId', '1']);
-		    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-		    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-		  })();
-		</script>
-		<!-- End Matomo Code -->
+		<script src="https://matomo.ikhoefgeen.nl/piwik.js" async></script>
 	</body>
 </html>
