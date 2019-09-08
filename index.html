@@ -248,22 +248,15 @@
 
 			window.addEventListener('hashchange', onhashchange);
 
-			Array.prototype.forEach.call(document.querySelectorAll('.detailed'), function(detailsSection) {
-				var parent = detailsSection.parentElement;
-
-				while (parent) {
-					if (parent.matches('.summary'))
-						break;
-					else
-						parent = parent.parentElement;
-				}
+			document.querySelectorAll('.detailed').forEach(detailsSection => {
+				const parent = detailsSection.closest('.summary');
 				
 				if (!parent || parent.classList.contains('has-details'))
 					return;
 
 				parent.classList.add('has-details');
 
-				var toggle = document.createElement('a');
+				const toggle = document.createElement('a');
 				toggle.href = '#';
 				toggle.className = 'details-toggle';
 				toggle.title = 'Tell me more';
@@ -274,23 +267,15 @@
 					e.preventDefault();
 					parent.classList.toggle('show-details');
 				});
-			})
+			});
+		
+			window._paq = [
+				['trackPageView'],
+				['enableLinkTracking'],
+				['setTrackerUrl', '//matomo.ikhoefgeen.nl/piwik.php'],
+				['setSiteId', '1']
+			];
 		</script>
-
-		<!-- Matomo -->
-		<script type="text/javascript">
-		  var _paq = _paq || [];
-		  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-		  _paq.push(['trackPageView']);
-		  _paq.push(['enableLinkTracking']);
-		  (function() {
-		    var u="//matomo.ikhoefgeen.nl/";
-		    _paq.push(['setTrackerUrl', u+'piwik.php']);
-		    _paq.push(['setSiteId', '1']);
-		    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-		    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-		  })();
-		</script>
-		<!-- End Matomo Code -->
+		<script src="https://matomo.ikhoefgeen.nl/piwik.js" async></script>
 	</body>
 </html>
