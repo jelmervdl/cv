@@ -88,6 +88,10 @@ sup {
 	line-height: 0;
 }
 
+:target {
+	background: rgba(255, 255, 0, 0.5);
+}
+
 .project-name {
 	font-style: italic;
 }
