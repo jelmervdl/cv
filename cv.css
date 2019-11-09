@@ -3,12 +3,7 @@ body {
 	font-size: 16px;
 	line-height: 1.6em;
 	color: #333;
-	background: white;
-}
-
-article {
-	width: 48em;
-	margin: 4em auto;
+	background: #fff;
 }
 
 h1, h2 {
@@ -22,30 +17,67 @@ h2 {
 	font-size: 1.8em;
 }
 
-abbr {
+a {
+	color: inherit;
+}
 
+abbr {
+	display: inline-block;
+	position: relative;
+}
+
+abbr::after {
+	content: '';
+	position: absolute;
+	bottom: 20%;
+	left: 0;
+	right: 0;
+	border-bottom: 1px dotted #333;
+}
+
+address {
+	
 }
 
 address {
 	font-style: normal;
+	padding-left: 6em;
 }
 
-.vcalendar,
-address {
+address .label {
+	font-family: sans-serif;
+	font-size: 0.9em;
+	float: left;
+	margin-left: -6.5em;
+	opacity: 0.5
+}
+
+.vcalendar {
 	list-style:none;
-	padding-left: 12em;
+	padding-left: 0;
 }
 
 .vevent {
 	margin-bottom: 0.8em;
 }
 
-.vevent .period,
-address .label {
-	float: left;
-	margin-left: -13.3em;
+.vevent .period {
+	display: block;
 	font-family: sans-serif;
 	font-size: 0.9em;
+	opacity: 0.5;
+}
+
+@media (min-width: 800px) {
+	.vcalendar, address {
+		padding-left: 12em;
+	}
+
+	.vevent .period, address .label {
+		opacity: 1.0;
+		float: left;
+		margin-left: -13.3em;
+	}
 }
 
 p {
@@ -66,7 +98,17 @@ sup {
 
 #last-modified {
 	opacity: 0.5;
-	float: right;
+}
+
+@media(prefers-color-scheme: dark) {
+	body {
+		background: #333;
+		color: #fff;
+	}
+
+	abbr::after {
+		border-bottom-color: #fff
+	}
 }
 
 @media print {
@@ -144,7 +186,6 @@ sup {
 }
 
 #toggle-details {
-	color: inherit;
 	float: right;
 	clear: right;
 }
@@ -181,5 +222,16 @@ sup {
 @media print {
 	.details-toggle {
 		display: none !important;
+	}
+}
+
+@media (min-width: 800px) {
+	#last-modified {
+		float: right;
+	}
+
+	article {
+		max-width: 48em;
+		margin: 4em auto;
 	}
 }
