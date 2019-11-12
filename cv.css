@@ -167,6 +167,10 @@ sup {
 		content: '–';
 		color: #ccc;
 	}
+
+	abbr::after {
+		display: none;
+	}
 }
 
 .less-detailed {
