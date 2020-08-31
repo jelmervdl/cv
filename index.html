@@ -270,11 +270,13 @@
 
 				parent.classList.add('has-details');
 
-				const toggle = document.createElement('a');
-				toggle.href = '#';
-				toggle.className = 'details-toggle';
-				toggle.title = 'Tell me more';
-				toggle.textContent = '…';
+				const toggle = Object.assign(document.createElement('a'), {
+					href: '#',
+					className: 'details-toggle',
+					title: 'Tell me more',
+					textContent: '…'
+				});
+				
 				parent.appendChild(toggle);
 
 				toggle.addEventListener('click', function(e) {
@@ -282,14 +284,6 @@
 					parent.classList.toggle('show-details');
 				});
 			});
-		
-			window._paq = [
-				['trackPageView'],
-				['enableLinkTracking'],
-				['setTrackerUrl', '//matomo.ikhoefgeen.nl/piwik.php'],
-				['setSiteId', '1']
-			];
 		</script>
-		<script src="https://matomo.ikhoefgeen.nl/piwik.js" async></script>
 	</body>
 </html>
