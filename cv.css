@@ -36,15 +36,16 @@ abbr::after {
 }
 
 address {
-	
+	display: inline;
 }
 
-address {
+.personalia address {
+	display: block;
 	font-style: normal;
 	padding-left: 6em;
 }
 
-address .label {
+.personalia address .label {
 	font-family: sans-serif;
 	font-size: 0.9em;
 	float: left;
@@ -69,11 +70,11 @@ address .label {
 }
 
 @media (min-width: 800px) {
-	.vcalendar, address {
+	.vcalendar, .personalia address {
 		padding-left: 12em;
 	}
 
-	.vevent .period, address .label {
+	.vevent .period, .personalia address .label {
 		opacity: 1.0;
 		float: left;
 		margin-left: -13.3em;
@@ -94,6 +95,18 @@ sup {
 
 .project-name {
 	font-style: italic;
+}
+
+.publications ol {
+	list-style: disc;
+}
+
+.publications li > a.publication-title:first-child {
+	display: block;
+}
+
+.publications .p-name.me {
+	font-weight: bold;
 }
 
 .publication-title {
@@ -132,8 +145,16 @@ sup {
 		page-break-inside: avoid;
 	}
 	
-	#languages {
-		
+	#languages ul {
+		padding: 0;
+	}
+
+	#languages li {
+		display: inline-block;
+	}
+
+	#languages li:not(:last-child):after {
+		content: ', ';
 	}
 	
 	a {
@@ -225,6 +246,10 @@ sup {
 
 .hide-details .summary:not(.show-details) .details-toggle {
 	display: inline;
+}
+
+.hide-details .publications .authors {
+	display: none;
 }
 
 @media print {
